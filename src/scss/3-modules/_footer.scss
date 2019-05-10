@@ -1,0 +1,24 @@
+/*---------------------------------------
+/*  3.7 Footer
+-----------------------------------------*/
+.footer {
+  &__top {
+    padding: 9rem 0;
+    background: $dark-alpha;
+  }
+  &__bottom {
+    padding: 2rem 0;
+    background: $dark-beta;
+    text-align: center;
+    text-transform: capitalize;
+    color: $light;
+    a {
+      display: inline-block;
+      color: rgba($light, 0.8);
+      &:hover {
+        text-decoration: none;
+        color: $beta;
+      }
+    }
+  }
+}

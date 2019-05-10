@@ -1,0 +1,11 @@
+/*---------------------------------------
+/*  3.1 Header
+-----------------------------------------*/
+.header {
+  position: absolute;
+  width: 100%;
+  background: $dark-alpha;
+  @include lg-screen {
+    background: lighten($dark, 97%);
+  }
+}

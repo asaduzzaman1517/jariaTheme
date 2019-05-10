@@ -1,0 +1,52 @@
+/*---------------------------------------
+/*  3.9 Hamburger Icon
+-----------------------------------------*/
+.hamburger {
+  padding: 1.35rem 0;
+  position: absolute;
+  top: 0%;
+  right: 8%;
+  cursor: pointer;
+  z-index: 100;
+  @include lg-screen {
+    display: none;
+  }
+
+  &__icon {
+    height: 4px;
+    width: 2rem;
+    border-radius: 4px;
+    background: #fff;
+    transition: all 0.2s;
+    &::before {
+      content: "";
+      display: block;
+      height: 4px;
+      border-radius: 4px;
+      background: #fff;
+      transform: translateY(-8px);
+      transition: all 0.2s;
+    }
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      border-radius: 4px;
+      background: #fff;
+      transform: translateY(4px);
+      transition: all 0.2s;
+    }
+  }
+
+  &--cross {
+    .hamburger__icon {
+      transform: rotate(45deg);
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        transform: translateY(-4px) rotate(90deg);
+      }
+    }
+  }
+}

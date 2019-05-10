@@ -1,0 +1,12 @@
+/*---------------------------------------
+/*  3.2 Brand Logo
+-----------------------------------------*/
+.brand-logo {
+  padding: 0.5rem 0;
+  &__img {
+    width: 4rem;
+    @include lg-screen {
+      width: 6rem;
+    }
+  }
+}

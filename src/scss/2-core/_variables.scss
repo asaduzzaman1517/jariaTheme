@@ -1,0 +1,19 @@
+//Color
+$light: #fff;
+$alpha: #17bebb;
+$beta: #ff6978;
+$gamma: #fed766;
+$dark: #000;
+$dark-alpha: lighten($dark, 15%);
+$dark-beta: lighten($dark, 25%);
+$dark-gamma: lighten($dark, 40%);
+
+//Brand Color
+$fb: #3b5998;
+$dbl: #ea4c89;
+$be: #1769ff;
+$pin: #bd081c;
+
+//Fonts
+$heading-font: "Josefin Sans", sans-serif;
+$body-font: "Roboto", sans-serif;

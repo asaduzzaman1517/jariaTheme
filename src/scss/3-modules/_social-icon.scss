@@ -1,0 +1,58 @@
+/*---------------------------------------
+/*  3.8 Social Icon
+-----------------------------------------*/
+.social-icon {
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    margin: 0 0.5rem;
+    float: left;
+    list-style: none;
+
+    &-link {
+      height: 2.5rem;
+      width: 2.5rem;
+      display: inline-block;
+      border-radius: 50%;
+      display: flex;
+      transition: all 0.3s;
+
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+      &--fb {
+        background: rgba($light, 0.8);
+        color: $dark-alpha;
+        &:hover {
+          background: $fb;
+        }
+      }
+      &--dbl {
+        background: rgba($light, 0.8);
+        color: $dark-alpha;
+        &:hover {
+          background: $dbl;
+        }
+      }
+      &--be {
+        background: rgba($light, 0.8);
+        color: $dark-alpha;
+        &:hover {
+          background: $be;
+        }
+      }
+      &--pin {
+        background: rgba($light, 0.8);
+        color: $dark-alpha;
+        &:hover {
+          background: $pin;
+        }
+      }
+    }
+    &-icon {
+      margin: auto;
+    }
+  }
+}

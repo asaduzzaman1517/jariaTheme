@@ -1,0 +1,42 @@
+/*---------------------------------------
+/*  3.5 banner
+-----------------------------------------*/
+.banner {
+  background: url(../img/woman.svg) center no-repeat;
+  background-size: cover;
+  @include lg-screen {
+    background: none;
+  }
+  &__overlay {
+    padding: 13rem 0 9rem;
+    background: rgba($dark, 0.8);
+    @include lg-screen {
+      background: rgba($dark, 0);
+    }
+  }
+  &__profile {
+    display: none;
+    @include lg-screen {
+      display: block;
+    }
+    &-img {
+      width: 100%;
+    }
+  }
+  &__text {
+    color: $light;
+    @include lg-screen {
+      color: $dark-gamma;
+    }
+    &-title {
+      color: $light;
+      font-size: 2rem;
+      @include lg-screen {
+        color: $dark-alpha;
+      }
+      @include md-screen {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

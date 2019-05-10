@@ -34,9 +34,15 @@ const sassSrcWatch = "src/scss/**/*";
 const sassWatch = "dist/css/**/*";
 
 //JS Path
-const jsSrc = "src/js/**/*.js";
+const jsSrc = [
+  "node_modules/jquery/dist/jquery.js",
+  "node_modules/bootstrap/dist/js/bootstrap.js",
+  "node_modules/popper.js/dist/popper.js",
+  "node_modules/filterizr/dist/jquery.filterizr.min.js",
+  "src/js/**/*.js"
+];
 const jsDist = "dist/js/";
-const jsWatch = "dist/js/**/*";
+const jsWatch = "dist/js/bundle.js";
 //HTML
 function html() {
   return src(htmlSrc).pipe(dest(htmlDist));
