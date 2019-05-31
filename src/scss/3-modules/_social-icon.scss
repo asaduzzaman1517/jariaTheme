@@ -4,6 +4,7 @@
 .social-icon {
   padding: 0;
   margin: 0;
+  display: inline-block;
 
   &__item {
     margin: 0 0.5rem;
@@ -23,28 +24,28 @@
         color: #fff;
       }
       &--fb {
-        background: rgba($light, 0.8);
+        background: $light;
         color: $dark-alpha;
         &:hover {
           background: $fb;
         }
       }
       &--dbl {
-        background: rgba($light, 0.8);
+        background: $light;
         color: $dark-alpha;
         &:hover {
           background: $dbl;
         }
       }
       &--be {
-        background: rgba($light, 0.8);
+        background: $light;
         color: $dark-alpha;
         &:hover {
           background: $be;
         }
       }
       &--pin {
-        background: rgba($light, 0.8);
+        background: $light;
         color: $dark-alpha;
         &:hover {
           background: $pin;

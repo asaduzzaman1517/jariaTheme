@@ -1,0 +1,120 @@
+/*---------------------------------------
+/*  3.13 Blog
+-----------------------------------------*/
+.blog {
+  padding: 9rem 0;
+  .blog-post {
+    padding: 1.5rem 0;
+    &__img {
+      &-link {
+        width: 100%;
+        height: 270px;
+        display: block;
+        text-decoration: none;
+        @include md-screen {
+          width: 90%;
+          height: 100%;
+          position: absolute;
+        }
+      }
+      &-one {
+        background: url(../img/g_1.png) center center no-repeat;
+        background-size: cover;
+      }
+      &-two {
+        background: url(../img/g_3.png) center center no-repeat;
+        background-size: cover;
+      }
+      &-three {
+        background: url(../img/g_4.png) center center no-repeat;
+        background-size: cover;
+      }
+      &-four {
+        background: url(../img/g_5.png) center center no-repeat;
+        background-size: cover;
+      }
+      &-five {
+        background: url(../img/g_6.png) center center no-repeat;
+        background-size: cover;
+      }
+      &-six {
+        background: url(../img/g_7.png) center center no-repeat;
+        background-size: cover;
+      }
+      &-seven {
+        background: url(../img/g_8.png) center center no-repeat;
+        background-size: cover;
+      }
+    }
+    &__content {
+      padding: 1.5rem 0;
+      &-decoration {
+        margin-bottom: 1rem;
+        display: block;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        color: $beta;
+      }
+      &-title {
+        text-transform: uppercase;
+        &-link {
+          display: inline-block;
+          color: $dark-beta;
+          &:hover {
+            text-decoration: none;
+            color: $dark-beta;
+          }
+        }
+      }
+      &-info {
+        font-size: 0.875rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: $dark-gamma;
+      }
+      &-para {
+        margin-top: 1rem;
+      }
+      &-icon {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: left;
+        &-item {
+          display: inline;
+          &-link {
+            display: inline-block;
+            padding: 0 0.3rem;
+            &:hover {
+              text-decoration: none;
+            }
+            .fa-facebook-f {
+              color: $fb;
+            }
+            .fa-dribbble {
+              color: $dbl;
+            }
+            .fa-behance {
+              color: $be;
+            }
+            .fa-pinterest {
+              color: $pin;
+            }
+          }
+        }
+      }
+      &-see-more {
+        display: inline-block;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        color: $beta;
+        &:hover {
+          text-decoration: none;
+        }
+        .fas {
+          padding: 0 0.3rem;
+        }
+      }
+    }
+  }
+}

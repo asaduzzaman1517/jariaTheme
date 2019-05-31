@@ -6,6 +6,6 @@
   width: 100%;
   background: $dark-alpha;
   @include lg-screen {
-    background: lighten($dark, 97%);
+    background: rgba($dark, 0.1);
   }
 }

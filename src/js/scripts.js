@@ -1,9 +1,6 @@
 "use strict";
 
-$(function() {
-  //Filterizr
-  var filterizd = $(".filtr-container").filterizr({});
-
+(function($) {
   //Hamburger Menu
   $(".hamburger").on("click", function() {
     $(this).toggleClass("hamburger--cross");
@@ -15,4 +12,9 @@ $(function() {
     $("li.active").removeClass("active");
     $(this).addClass("active");
   });
+})(jQuery);
+
+//Preloader
+$(window).on("load", function() {
+  $(".preloader").fadeOut(500);
 });

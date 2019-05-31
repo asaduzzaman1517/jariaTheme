@@ -34,15 +34,18 @@ const sassSrcWatch = "src/scss/**/*";
 const sassWatch = "dist/css/**/*";
 
 //JS Path
-const jsSrc = [
-  "node_modules/jquery/dist/jquery.js",
-  "node_modules/bootstrap/dist/js/bootstrap.js",
-  "node_modules/popper.js/dist/popper.js",
-  "node_modules/filterizr/dist/jquery.filterizr.min.js",
-  "src/js/**/*.js"
-];
+const jsSrc = ["src/js/**/*.js"];
 const jsDist = "dist/js/";
 const jsWatch = "dist/js/bundle.js";
+
+//Vendor JS
+const vendorJsSrc = [
+  "node_modules/jquery/dist/jquery.js",
+  // "node_modules/bootstrap/dist/js/bootstrap.js",
+  // "node_modules/popper.js/dist/popper.js",
+  "node_modules/filterizr/dist/jquery.filterizr.min.js"
+];
+
 //HTML
 function html() {
   return src(htmlSrc).pipe(dest(htmlDist));
@@ -93,7 +96,20 @@ function js() {
         presets: ["@babel/env"]
       })
     )
-    .pipe(concat("bundle.js"))
+    .pipe(uglify())
+    .pipe(lineEnd())
+    .pipe(dest(jsDist, { sourcemaps: true }));
+}
+
+//Vendor JS
+function vendorJs() {
+  return src(vendorJsSrc, { sourcemaps: true })
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
+    .pipe(concat("vendor.js"))
     .pipe(uglify())
     .pipe(lineEnd())
     .pipe(dest(jsDist, { sourcemaps: true }));
@@ -118,6 +134,7 @@ function serv() {
     watch(fontSrc, fonts),
     watch(imgSrc, img),
     watch(sassSrcWatch, style),
+    watch(vendorJsSrc, vendorJs),
     watch(jsSrc, js),
     watch([htmlWatch, jsWatch, fontWatch, imgWatch, sassWatch]).on(
       "change",
@@ -134,5 +151,10 @@ exports.style = style;
 exports.js = js;
 exports.clean = clean;
 exports.serv = serv;
+exports.vendorJs = vendorJs;
 //Exports Default
-exports.default = series(clean, parallel(html, fonts, img, style, js), serv);
+exports.default = series(
+  clean,
+  parallel(html, fonts, img, style, js, vendorJs),
+  serv
+);

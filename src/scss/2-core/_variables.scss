@@ -1,9 +1,12 @@
 //Color
 $light: #fff;
+$light-bg: #ededed;
+$extra-light-bg: #f8f8f8;
 $alpha: #17bebb;
 $beta: #ff6978;
 $gamma: #fed766;
 $dark: #000;
+$dark-bg: #1b2144;
 $dark-alpha: lighten($dark, 15%);
 $dark-beta: lighten($dark, 25%);
 $dark-gamma: lighten($dark, 40%);

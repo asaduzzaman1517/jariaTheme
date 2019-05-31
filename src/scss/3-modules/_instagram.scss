@@ -1,0 +1,57 @@
+/*---------------------------------------
+/*  3.18 Instagram Image Showcase
+-----------------------------------------*/
+.instagram {
+  background: $extra-light-bg;
+  text-align: center;
+  &__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  &__img {
+    width: 100%;
+    height: 90px;
+    @include md-screen {
+      height: 198px;
+    }
+    @include lg-screen {
+      height: 90px;
+    }
+    &--one {
+      background: url(../img/g_1.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--two {
+      background: url(../img/g_6.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--three {
+      background: url(../img/g_3.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--four {
+      background: url(../img/g_4.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--five {
+      background: url(../img/g_2.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--six {
+      background: url(../img/g_5.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--seven {
+      background: url(../img/g_9.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--eight {
+      background: url(../img/g_6.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--nine {
+      background: url(../img/g_13.png) center center no-repeat;
+      background-size: cover;
+    }
+  }
+}

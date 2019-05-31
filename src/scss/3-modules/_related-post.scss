@@ -1,0 +1,44 @@
+/*---------------------------------------
+/*  3.19 Related Post
+-----------------------------------------*/
+.related-post {
+  background: $extra-light-bg;
+  text-align: center;
+  &__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  &__img {
+    width: 100%;
+    height: 76px;
+    @include md-screen {
+      height: 178px;
+    }
+    @include lg-screen {
+      height: 65px;
+    }
+    &--one {
+      background: url(../img/g_1.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--two {
+      background: url(../img/g_3.png) center center no-repeat;
+      background-size: cover;
+    }
+    &--three {
+      background: url(../img/g_6.png) center center no-repeat;
+      background-size: cover;
+    }
+  }
+  &__head {
+    text-transform: uppercase;
+    text-align: left;
+    &-link {
+      color: $dark-gamma;
+      &:hover {
+        text-decoration: none;
+        color: $beta;
+      }
+    }
+  }
+}

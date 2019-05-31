@@ -1,0 +1,45 @@
+/*---------------------------------------
+/*  3.17 Newsletter
+-----------------------------------------*/
+.newsletter {
+  background: $extra-light-bg;
+  text-align: center;
+  &__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  &__input {
+    display: block;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid $light-bg;
+    text-align: center;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      opacity: 1;
+      font-size: 0.875rem;
+      text-transform: capitalize;
+      color: lighten($dark, 80%);
+    }
+  }
+  &__submit {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    border: 1px solid $beta;
+    background: $beta;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    font-family: $heading-font;
+    text-transform: uppercase;
+    color: $light;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 6px 20px -7px lighten($dark, 60%);
+    }
+  }
+}

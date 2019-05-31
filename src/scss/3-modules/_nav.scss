@@ -53,7 +53,7 @@
       padding: 1.1rem 0.7rem;
       margin: 0;
       border-bottom: 4px solid transparent;
-      color: $dark-gamma;
+      color: lighten($dark-gamma, 15%);
       transition: all 0.5s;
     }
 

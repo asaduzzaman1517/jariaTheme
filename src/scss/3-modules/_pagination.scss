@@ -1,0 +1,30 @@
+/*---------------------------------------
+/*  3.14 Pagination
+-----------------------------------------*/
+.pagination {
+  display: inline-block;
+  &-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &__item {
+      display: inline;
+      &--active {
+        color: $beta !important;
+      }
+      &-link {
+        display: inline-block;
+        padding: 0 1rem;
+        text-transform: uppercase;
+        color: $dark-gamma;
+        &:hover {
+          color: $beta;
+          text-decoration: none;
+        }
+        .fas {
+          padding: 0 0.3rem;
+        }
+      }
+    }
+  }
+}
